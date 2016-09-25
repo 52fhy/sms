@@ -16,11 +16,6 @@ composer require yjc/sms
 },
 ```
 
-然后在命令行执行自动加载的更新：
-```
-composer dump-autoload
-```
-
 ## 使用示例
 首先需要到各大提供商注册并审核。然后进行配置。
 
