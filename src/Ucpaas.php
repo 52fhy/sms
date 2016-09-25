@@ -8,6 +8,7 @@
 
 namespace Yjc\Sms;
 use \Exception;
+use \Yjc\Sms\Ucpaas\Ucpaas as UcpaasProvider;
 
 class Ucpaas implements SmsInterface
 {
@@ -55,7 +56,7 @@ class Ucpaas implements SmsInterface
      */
     public function send($mobile, $temp_id, $params = array())
     {
-        $ucpass = new \Yjc\Sms\Lib\Ucpaas(self::$ucpaas);
+        $ucpass = new UcpaasProvider(self::$ucpaas);
 
         $appId = self::$ucpaas['appid']; //应用id
 
@@ -84,7 +85,7 @@ class Ucpaas implements SmsInterface
      */
     public function sendVoice($mobile, $vcode)
     {
-        $ucpass = new \Yjc\Sms\Lib\Ucpaas(self::$ucpaas);
+        $ucpass = new UcpaasProvider(self::$ucpaas);
 
         $appId = self::$ucpaas['appid'];
         $to = $mobile;
@@ -108,11 +109,11 @@ class Ucpaas implements SmsInterface
      * @param $vcode
      * @param string $vaild_time
      * @return bool
-     * @throws Lib\Exception
+     * @throws Ucpaas\Exception
      */
     public function sendVcode($mobile, $vcode, $vaild_time = '30'){
         //初始化 $options必填
-        $ucpass = new \Yjc\Sms\Lib\Ucpaas(self::$ucpaas);
+        $ucpass = new UcpaasProvider(self::$ucpaas);
 
         $appId = self::$ucpaas['appid'];
         $to = $mobile;
