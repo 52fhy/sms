@@ -1,0 +1,24 @@
+{
+    "name": "yjc/sms",
+    "description": "短信SDK",
+    "keywords": [
+        "sms",
+        "sms-sdk",
+        "sdk"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "52fhy",
+            "email": "yjc@52fhy.com"
+        }
+    ],
+    "require": {
+        "php":">=5.4.0",
+    },
+    "autoload": {
+        "psr-4": {
+            "Yjc\\Sms\\": "src/"
+        }
+    }
+}
