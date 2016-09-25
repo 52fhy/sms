@@ -1,5 +1,5 @@
 # sms
-云之讯等短信接口SDK汇聚
+云之讯、容联云、阿里大于等短信接口SDK汇聚
 
 ![build=passing][ico-build]
 [![Latest Version on Packagist][ico-version]][link-packagist]
