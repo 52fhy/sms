@@ -2,7 +2,7 @@
 云之讯等短信接口SDK汇聚
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]]
+![Software License][ico-license]
 [![Total Downloads][ico-downloads]][link-downloads]
 
 将常用的各大验证码短信提供商的接口汇聚在一起，方便实际应用。会不断完善补充。
