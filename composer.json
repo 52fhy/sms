@@ -1,6 +1,8 @@
 {
     "name": "yjc/sms",
     "description": "短信SDK",
+    "type": "library",
+    "homepage": "http://github.com/52fhy/sms",
     "keywords": [
         "sms",
         "sms-sdk",
@@ -18,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Yjc\\Sms\\": "src/"
+            "Yjc\\Sms\\": "src"
         }
     }
 }
