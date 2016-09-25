@@ -28,14 +28,26 @@ composer require yjc/sms
 极光验证码：
 ``` php
 $sms = new \Yjc\Sms\Jsms('appkey', 'masterkey');
-$sms->send('13482827633', 'temp_id');
+$sms->send($mobile, 'temp_id');
 ```
 可以在SDK里配置appkey和masterkey，也可以代码里实时配置。
 
 云之讯：
 ``` php
 $sms = new \Yjc\Sms\Ucpaas('token', 'appid', 'accountsid');
-$sms->send('13482827633', 'temp_id');
+$sms->send($mobile, $temp_id, $params);
+```
+
+容联云：
+``` php
+$sms = new \Yjc\Sms\RongSms();
+$sms->send($mobile, $temp_id, $params);
+```
+
+阿里大于
+``` php
+$sms = new \Yjc\Sms\AliSms();
+$sms->send($mobile, $temp_id, $params , $sign_name);
 ```
 
 [ico-build]: https://img.shields.io/badge/build-passing-brightgreen.svg?maxAge=2592000
