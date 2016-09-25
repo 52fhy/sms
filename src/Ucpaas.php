@@ -65,12 +65,12 @@ class Ucpaas implements SmsInterface
 
         $param = implode(',', $params);
 
-        $res = $ucpass->templateSMS($appId, $tel, $temp_id, $param);
+        $res = $ucpass->templateSMS($appId, $mobile, $temp_id, $param);
 
         $res = json_decode($res, true);
         $errcode = $res['resp']['respCode'];
         if ($errcode !== '000000') {
-            $msg = $tel . ':' . json_encode($params) . '---' . 'errcode:'. $errcode;
+            $msg = $mobile . ':' . json_encode($params) . '---' . 'errcode:'. $errcode;
             $this->writeLog($msg);
         }
 

@@ -8,6 +8,7 @@
  * Dec : ucpass php demo
  */
 namespace Yjc\Sms\Lib;
+use \Exception;
 
 class Ucpaas
 {
@@ -86,7 +87,7 @@ class Ucpaas
         $data = $this->connection($url,$body,$type,$method);
 
         $msg = $url . "\t" . json_encode($body) . "\t" . json_encode($data);
-        Logger::writeUcpaasLog($msg);
+        //Logger::writeUcpaasLog($msg);
         if (isset($data) && !empty($data)) {
             $result = $data;
         } else {
